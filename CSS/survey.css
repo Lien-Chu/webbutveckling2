@@ -1,4 +1,4 @@
-
+/* Add a black background image to the survey-container */
 .survey-container {
   background-image: url(/image/survey-s.jpg); 
   background-repeat: no-repeat;
@@ -8,6 +8,7 @@
   margin: auto;
 }
 
+/* Add a black background color and opacity to make the text on the image easier to read.*/
 .survey-wrap {
   padding: 2% 2%;
   width: 75%;
@@ -17,6 +18,7 @@
   text-align: left;
 }
 
+/* Style the fieldset to let it meach to survey-wrap div*/
 fieldset {
   margin-top: 20px;
   font-size: 12px;
@@ -24,6 +26,7 @@ fieldset {
   border-radius: 5px;
 }
 
+/* Style the send bottom.*/
 #send {
   margin-bottom: 10px;
   width: 99%;
@@ -35,6 +38,7 @@ fieldset {
   font-size: 12px;
 }
 
+/* Change the color of send bottom on hover.*/
 #send:hover {
   transition: 0.1s ease;
   background-color: #91a092;
@@ -43,6 +47,7 @@ fieldset {
   cursor: pointer;
 }
 
+/* Style the reset bottom.*/
 #reset {
   margin-bottom: 30px;
   width: 99%;
@@ -53,7 +58,7 @@ fieldset {
   border-radius: 5px;
   font-size: 12px;
 }
-
+/* Change the color of reset bottom on hover.*/
 #reset:hover {
   transition: 0.1s ease;
   background-color: #91a092;
@@ -62,7 +67,11 @@ fieldset {
   cursor: pointer;
 }
 
+
+
+/* Let style change automatically according to device screen size..*/
 @media (min-width: 426px) and (max-width: 768px){
+
   .survey-container {
     background-image: url(/image/survey-s.jpg); 
     background-position: bottom left;
@@ -88,6 +97,7 @@ fieldset {
 
 
 @media (min-width: 769px) and (max-width: 1439px){
+
   .survey-container {
     background-image: url(/image/survey.jpg); 
     background-position: bottom right;
@@ -112,6 +122,7 @@ fieldset {
 }
 
 @media (min-width: 1440px) and (max-width: 2559px){
+
   .survey-container {
     background-image: url(/image/survey.jpg); 
     background-position: center right;
@@ -136,6 +147,7 @@ fieldset {
 }
 
 @media (min-width: 2560px){
+  
 .survey-container {
   background-image: url(/image/survey.jpg); 
   background-position: center right;
@@ -157,5 +169,4 @@ fieldset {
 #reset {
   font-size: 14px;
 }
-
 }

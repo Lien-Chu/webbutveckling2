@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/CSS/myCustom.css">
+<!--Skapa en ny stylesheet och lägg till den i länken och använd det nya klassnamnet för att lägga till stilarna.-->
 <link rel="stylesheet" href="/CSS/survey.css">
 
 <body>
@@ -15,7 +16,7 @@
         <a href="/tokyo.html">Tokyo</a>
         <a href="/cities-bucketlist.html">Cities Bucketlist</a>
         <a href="/contactform.html">Contact</a>
-        <a href="/survey.html" class="w3-light-gray">Survey</a>
+        <a href="/survey.html" class="w3-light-gray">Survey</a> <!-- Lägg till länk till survey-sidan-->
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>
@@ -24,25 +25,29 @@
         <h1>Survey</h1>
         <p>What is your favourite city?</p>
     </div>
-    <br>
+
     <div class="survey-container">
+        <!-- Ändra klassnamnet för att lägga till en ny stil-->
         <div class="survey-wrap">
+            <!-- Ändra klassnamnet för att lägga till en ny stil -->
+            <!-- Lägg method="post" enctype="text/plain" action="mailto:min e-post" för att när man submit knappa kan skickar till min e-post.-->
             <form id="my-form" name="form" method="post" enctype="text/plain" action="mailto:liarn2001@gmail.com">
                 <fieldset>
                     <legend>Contact details</legend>
                     <label for="fnamn">First name:</label> <br>
                     <input type="text" name="fnamn" id="fnamn" required /> <br>
+                    <!-- Lägg till required för att visas tom när man trycker på skickar knappen. -->
                     <label for="enamn">Surname:</label> <br>
                     <input type="text" name="enamn" id="enamn" required /> <br>
                     <label for="epost">E-mail:</label> <br>
                     <input type="text" name="epost" id="epost" required /> <br>
                     <label for="meddelande">What is your next travel destinatino?: </label> <br>
                     <textarea name="meddelande" id="meddelande" rows="5" cols="21" required></textarea> <br>
-                </fieldset>
+                </fieldset> <br>
 
-                <br>
                 <fieldset>
                     <legend>Favourite City</legend>
+                    <!-- Lägg value= " " som matcha till alternativer av frågor för att kunna skickar till e-post.-->
                     <input type="radio" name="favouriteCity" id="london" value="london" />
                     <label for="london">London</label> <br>
                     <input type="radio" name="favouriteCity" id="paris" value="paris" />
@@ -51,9 +56,10 @@
                     <label for="tokyo">Tokyo</label> <br>
                     <input type="radio" name="favouriteCity" id="other" value="other" />
                     <label for="other">Other</label>
-                </fieldset>
-                <br>
+                </fieldset> <br>
+
                 <fieldset>
+                    <!-- Använd select-option satsen for alternativer av frågor.-->
                     <legend>About your travle</legend>
                     <label for="select">Who are you travle with?</label>
                     <select name="favoritarstid" id="favoritarstid">
@@ -63,10 +69,9 @@
                         <option value="Alone"> Alone </option>
                         <option value="Grup"> Grup </option>
                         <option value="undecided"> undecided! </option>
-                    </select>
-                    <br>
-                    <label for="select"><br>Type of accommodation?</label>
-                    <br>
+                    </select> <br><br>
+
+                    <label for="select">Type of accommodation?</label> <br>
                     <select name="Accommodation" id="accommodation">
                         <option> Choose here! </option>
                         <option value="Premium hotel"> Premium hotel </option>
@@ -74,48 +79,42 @@
                         <option value="B&B"> B&B </option>
                         <option value="Camping"> Camping </option>
                         <option value="undecided"> undecided! </option>
-                    </select>
-                    <br>
-                    <label for="select"><br>Transportation at the destination?</label>
-                    <br>
+                    </select> <br><br>
+
+                    <label for="select">Transportation at the destination?</label> <br>
                     <select name="Transportation" id="transportation">
                         <option> Choose here! </option>
                         <option value="Self-driving"> Self-driving </option>
                         <option value="Public transportation"> Public transportation </option>
                         <option value="Tour bus"> Tour bus </option>
                         <option value="undecided"> undecided! </option>
-                    </select>
-                    <br>
-                    <label for="select"><br>How long are your travel days?</label>
-                    <br>
+                    </select> <br><br>
+
+                    <label for="select">How long are your travel days?</label> <br>
                     <select name="TravelDays" id="travel-days">
                         <option> Choose here! </option>
                         <option value="1 - 2 weeks"> 1 - 2 weeks </option>
                         <option value="2 - 3 weeks"> 2 - 3 weeks </option>
                         <option value="2 - 3 months"> 2 - 3 months </option>
                         <option value="undecided ">Travel days undecided</option>
-                    </select>
-                    <br>
-                    <label for="select"><br>Do you want to buy travel insurance?</label>
-                    <br>
+                    </select> <br><br>
+
+                    <label for="select">Do you want to buy travel insurance?</label> <br>
                     <select name="TravelInsurance" id="travel-insurance">
                         <option> Choose here! </option>
                         <option value="Buy travel insurance"> Yes! </option>
                         <option value="Do not buy travel insurance"> No! </option>
                         <option value="Haven't decided whether to buy travel insurance"> undecided! </option>
-                    </select>
-                    <br>
-                    <br>
-                </fieldset>
-                <br>
-                <input type="submit" id="send" value="Send">
-                <br>
-                <input type="reset" id="reset" value="Reset">
-                <br><br>
-            </form>          
-        </div> 
+                    </select> <br><br>
+                </fieldset> <br>
+
+                <!-- Skapa två knappar med input för submit  typ och reset typ.-->
+                <input type="submit" id="send" value="Send"> <br>
+                <input type="reset" id="reset" value="Reset"> <br><br>
+            </form>
+        </div>
     </div>
-  
+    <!-- Kopiera sidfot div från index html och ändra färg genom att använda 3w css klass. -->
     <div class="footer w3-light-gray">
         <a href="contactform.html">
             <p>Contact</p>
