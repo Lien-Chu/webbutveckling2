@@ -1,0 +1,225 @@
+/* Add a black background image to the survey-container */
+body {
+  box-sizing: border-box;
+}
+
+.bucketlist-container {
+  color:  #706966ec;
+  font-weight:bold ;
+  margin: auto;
+ 
+  width: 100%;
+}
+
+/* Add a black background color and opacity to make the text on the image easier to read.*/
+.bucketlist-wrap {
+
+  background-color: #dfd4d02e;
+  width: 335px;
+  
+  margin: 0 auto;
+  text-align: left;
+}
+
+.gap {
+  background-image: url(/image/Cities-Bucketlist-s.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size:cover;
+  width: 335px;
+  height:35vh;
+  margin: 0 auto;
+}
+
+/* Style the fieldset to let it meach to survey-wrap div*/
+fieldset {
+  margin-top: 20px;
+  font-size: 12px;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 5px;
+}
+input::placeholder
+{
+color: rgb(242, 155, 109);
+font-style: italic;
+font-size: 12px;
+}
+
+#cityName{
+margin-top: 10px;
+color: rgb(238, 90, 10);
+font-size: 15px;
+height: 35px;
+width: 60%;
+}
+
+/* Style the Add City bottom.*/
+#cityNameSubmit {
+  margin-bottom: 10px;
+  width: 80px;
+  height: 30px;
+  background-color: #f95616c5;
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+/* Change the color of send bottom on hover.*/
+#cityNameSubmit:hover {
+  transition: 0.1s ease;
+  background-color: #dfd4d043;
+  color: #f95616c5;
+  border: 3px solid #110c0a6f;
+  cursor: pointer;
+}
+
+/* Style the reset bottom.*/
+#reset {
+  margin-left: 30px;
+  width: 80px;
+  height: 30px;
+  background-color: #110c0a56;
+  color: white;
+  border: 2px solid rgb(82, 131, 211);
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+/* Change the color of reset bottom on hover.*/
+#reset:hover {
+  transition: 0.1s ease;
+  background-color: white;
+  color: rgb(82, 131, 211);
+  border: 3px solid  #110c0a6f;
+  cursor: pointer;
+}
+
+.citiesList {
+  width: 250px;
+}
+
+.listItem-styling {
+margin: 15px;
+cursor: pointer;
+background-color: #dfd4d043;
+color:  #1c100bc5;
+border: 1px solid #110c0a6f;
+height: 35px;
+border-radius: 3px;
+width: 200px;
+padding: 8px 0 0 8px;
+background-color: rgb(228, 223, 221);
+}
+
+.checkInput-styling{
+background-color: rgb(198, 166, 227);
+}
+
+.deleteButton-styling{
+  border-radius: 3px;
+justify-content: right;
+width: 20px;
+color: wheat;
+background-color: rgb(234, 142, 142);
+}
+
+
+/* Let style change automatically according to device screen size..
+  @media (min-width: 426px) and (max-width: 768px){
+  
+    .bucketlist-container {
+      background-position: bottom left;
+    }
+    
+    .bucketlist-wrap {
+      width: 50%;
+      margin-left: 40%;
+    }
+    
+    fieldset {
+      font-size: 13px;
+    }
+    
+    #send {
+      font-size: 13px;
+    }
+  
+    #reset {
+      font-size: 13px;
+    }
+  }
+  
+  
+  @media (min-width: 769px) and (max-width: 1439px){
+  
+    .bucketlist-container { 
+      background-position: bottom right;
+    }
+    
+    .bucketlist-wrap {
+      width: 32%;
+      margin-left: 5%;
+    }
+    
+    fieldset {
+      font-size: 14px;
+    }
+    
+    #send {
+      font-size: 14px;
+    }
+  
+    #reset {
+      font-size: 14px;
+    }
+  }
+  
+  @media (min-width: 1440px) and (max-width: 2559px){
+  
+    .bucketlist-container {   
+      background-position: center right;
+    }
+    
+    .bucketlist-wrap {
+      width: 20%;
+      margin-left: 5%;
+    }
+    
+    fieldset {
+      font-size: 14px;
+    }
+    
+    #send {
+      font-size: 14px;
+    }
+  
+    #reset {
+      font-size: 14px;
+    }
+  }
+  
+  @media (min-width: 2560px){
+    
+  .bucketlist-container {
+    background-position: center right;
+  }
+  
+  bucketlist-wrap {
+    width: 18%;
+    margin-left: 5%;
+  }
+  
+  fieldset {
+    font-size: 14px;
+  }
+  
+  #send {
+    font-size: 14px;
+  }
+  
+  #reset {
+    font-size: 14px;
+  }
+  } */

@@ -13,14 +13,14 @@
         <a href="/london.html">London</a>
         <a href="/paris.html">Paris</a>
         <a href="/tokyo.html">Tokyo</a>
-        <a href="/cities-bucketlist.html" class="w3-light-blue" >Cities Bucketlist</a>
+        <a href="/cities-bucketlist.html" class="w3-dark-gray">Cities Bucketlist</a>
+        <a href="/survey.html">Survey</a> <!-- Lägg till länk till survey-sidan-->
         <a href="/contactform.html">Contact</a>
-        <a href="/survey.html" >Survey</a> <!-- Lägg till länk till survey-sidan-->
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>
     </div>
-    <div class="w3-container w3-beige w3-light-blue">
+    <div class="w3-container w3-beige w3-dark-gray">
         <h1>Cities Bucketlist</h1>
         <p>Add your favourite cities to the bucketlist!</p>
     </div>
@@ -29,28 +29,22 @@
         <div class="bucketlist-wrap">
             <fieldset>
                 <legend>My Cities</legend>
-                <label for="cityName">City Name:</label> <br>
-                <input type="text" name="cityName" id="cityName" required/> <br>
-                <input type="submit" id="submit" value="Add City"> <br><br>
-                <label for="cityies">Cities:</label> <br>            
-                <textarea name="" id="" required></textarea> <br>
-                <textarea name="" id="" required></textarea> <br>
-                <textarea name="" id="" required></textarea> <br>
-                <textarea name="" id="" required></textarea> <br>
-                <textarea name="" id="" required></textarea> <br>
-            </fieldset>
-            
-                <br>
-                    <input type="submit" id="send" value="Send">
-                    <br>
-                    <input type="reset" id="reset" value="Reset">
-    
+                <label for="cityName">City Name:</label><br>
+                <input type="text" id="cityName" placeholder="Enter City's Name" />
+                <Button id="cityNameSubmit">Add City</Button> <br><br>
+                <div class="citiesList" id="cltiesListItems"></div>
+            </fieldset><br>
+
+        </div>
+        <div class="gap">
         </div>
     </div>
-    <div class="footer w3-light-blue">
-        <a href="contactform.html"><p>Contact</p></a>
-      </div>
-   
+    <div class="footer w3-dark-gray">
+        <a href="contactform.html">
+            <p>Contact</p>
+        </a>
+    </div>
+    <script src="/Javascript/cities-bucketlist.js"></script>
 </body>
 
 </html>
