@@ -1,55 +1,43 @@
-// let cityNameButton = document.getElementById('cityNameSubmit');
-// let citiesList = document.getElementById('cltiesListItems');
-// let cityNameInput = document.getElementById('cityName');
+
+document.querySelector('#cityNameSubmit').onclick = function () {
+        addCities();
+}
 
 
-// cityNameButton.addEventListener('click', function (){
-//     var listItem = document.createElement('p');
-//     listItem.classList.add('listItem-styling');
-//     listItem.innerText = cityNameInput.value;
-//     citiesList.appendChild(listItem);
-//     cityNameInput.value = " ";
-//     listItem.addEventListener('click', function (){
-//         listItem.style.textDecoration = "line-through";
-//     })
-//     listItem.addEventListener('dblclick', function (){
-//         citiesList.removeChild(listItem);
-//     })
-// })
+window.onkeypress = function (event) {
+        if (event.which == 13) {
+                addCities();
+        }
+}
 
-let cityNameButton = document.getElementById('cityNameSubmit');
-let citiesList = document.getElementById('cltiesListItems');
-let cityNameInput = document.getElementById('cityName');
 
-cityNameButton.addEventListener('click', function () {
-    var listItemCheck = document.createElement('input');
-    listItemCheck.type = "button";
-    listItemCheck.value = 'Check';
-    citiesList.appendChild(listItemCheck);
-    listItemCheck.classList.add('checkInput-styling');
-    listItemCheck.addEventListener('click', function () {
-        listItem.style.textDecoration = "line-through"
-    })
-    listItemCheck.addEventListener('dblclick', function () {
-        listItem.style.textDecoration = "none";
-    })
+function addArray() {
+        const citiseArray = [];
+        items = document.querySelector('#getCityName').value;
+        citiseArray.push(items); 
+}
 
-    var listItem = document.createElement('p');
-    listItem.classList.add('listItem-styling');
-    listItem.innerText = cityNameInput.value;
-    citiesList.appendChild(listItem);
-    cityNameInput.value = " ";
-
-    var deleteButton = document.createElement('input');
-    deleteButton.type = "button";
-    deleteButton.value = 'X';
-    citiesList.appendChild(deleteButton);
-    deleteButton.classList.add('deleteButton-styling');
-    deleteButton.addEventListener('click', function () {  
-        citiesList.removeChild(listItem);
-        citiesList.removeChild(listItemCheck);
-        citiesList.removeChild(deleteButton);    
-    })
-})
-
+function addCities() {
+        if (document.querySelector('#getCityName').value.length == 0) {
+                alert("Pelase Enter a city's Name")
+        }
+        else {
+                document.querySelector('#cltiesListItems').innerHTML += `
+        <div class="task">
+            <span id="cityName">
+                ${document.querySelector('#getCityName').value}
+            </span>
+            <button class="delete">Delete</i></button>
+        </div>`;
+                addArray();
+                document.querySelector('#getCityName').value = " ";
+                deletArray = document.querySelectorAll(".delete");
+                for (let i = 0; i < deletArray.length; i++) {
+                        deletArray[i].onclick = function () {
+                                this.parentNode.remove();
+                        }
+                }
+        }
+}
+   
 
