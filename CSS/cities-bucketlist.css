@@ -49,43 +49,39 @@ input::placeholder {
 
 /* Set styles to the input. */
 #getCityName {
-  margin: 15px;
+  margin-top: 15px;
+  margin-left: 45px;
   background-color: #dfd4d043;
   color: rgb(242, 155, 109);
   border: 1px solid #110c0a6f;
   width: 55%;
   height: 35px;
   border-radius: 3px;
-  padding-left: 10px;
+  padding-left: 8px;
 }
 
 /* Set styles to the input on hover. */
 #getCityName:hover {
-  margin: 15px;
   background-color: #ffffff43;
   color: rgb(242, 155, 109);
   border: 1px solid #f64804c5;
-  width: 55%;
-  height: 35px;
-  border-radius: 3px;
-  padding-left: 10px;
 }
 
 
 /* Set styles to the Add City bottom.*/
-#cityNameSubmit {
+#cityNamebtn {
   margin-bottom: 10px;
-  width: 70px;
+  width: 80px;
   height: 35px;
   background-color: #f95616c5;
   color: white;
   border: 2px solid white;
   border-radius: 5px;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 /* Change the styles of submit bottom on hover.*/
-#cityNameSubmit:hover {
+#cityNamebtn:hover {
   transition: 0.1s ease;
   background-color: #dfd4d043;
   color: #f64804c5;
@@ -106,7 +102,7 @@ input::placeholder {
 
 /* Change the style of task div on hover.*/
 .task:hover {
-  transition: 0.1s ease;
+  transition: 0.2s ease;
   background-color: #fcfcfc43;
   border: 1px solid #f64804c5;
   padding-top: 9px;
@@ -119,7 +115,8 @@ input::placeholder {
 }
 
 /* Set styles to the Add City bottom.*/
-#sortCities {
+#sortCitiesbtn {
+  transition: 0.2s ease;
   margin-bottom: 10px;
   width: 70px;
   height: 35px;
@@ -131,32 +128,11 @@ input::placeholder {
 }
 
 /* Change the styles of submit bottom on hover.*/
-#sortCities:hover {
+#sortCitiesbtn:hover {
   transition: 0.1s ease;
   background-color: #dfd4d043;
   color:#07ab6cc5;
   border: 2px solid#07ab6cc5;
-  cursor: pointer;
-}
-
-/* Set styles to the Add City bottom.*/
-#upperCase {
-  margin-bottom: 10px;
-  width: 90px;
-  height: 35px;
-  background-color: #6e6e68c5;
-  color: white;
-  border: 2px solid white;
-  border-radius: 5px;
-  font-size: 12px;
-}
-
-/* Change the styles of submit bottom on hover.*/
-#upperCase:hover {
-  transition: 0.1s ease;
-  background-color: #dfd4d043;
-  color:#6e6e68c5;
-  border: 2px solid#6e6e68c5;
   cursor: pointer;
 }
 
@@ -235,11 +211,11 @@ input::placeholder {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .bucketlist-wrap {
-    width: 25vw;
+    width: 30vw;
   }
 
   .gap {
-    width: 25vw;
+    width: 30vw;
   }
 
   .task {

@@ -31,41 +31,41 @@
         <!-- Set a div as a wrap to wrap all element to it to styling and to justify elements. -->
         <div class="bucketlist-wrap">
             <!-- Set a fieldset tag to wrap all input elements to let them match to survey page. -->
-            <fieldset>
-             
-                <!-- Set a legend tag to wrap all input elements to let them match to survey page. -->
-                <legend>My Cities</legend>
-                <!-- Set a label tag to let the user know that the input value should be set. -->
-                <label for="getCityName">City Name:</label><br>
-                <!-- Set an input tag to let the user can set the value in it. -->
-                <input type="text" id="getCityName" placeholder="Enter City's Name" />
-                <!-- Set an button tag to let the user can submit the input value. -->
-                <Button id="cityNamebtn" onclick="addCities()">Add City</Button> <br><br>
-                <!-- Set a div tag as a box to wrap all Items that user submitted. -->
-            
-                <div class="citiesList" id="cltiesListItems">
-                    <!-- Set a div tag as a small box to styling every single item that the user submitted. -->
-                    <div class="task">
-                        <!-- Set a span tag with a unique id to set the item that the user submitted. -->
-                        <span class="cityName" id="cityName1"></span>
+            <form action="" method="post">
+                <fieldset>
+                    <!-- Set a legend tag to wrap all input elements to let them match to survey page. -->
+                    <legend>My Cities</legend>
+                    <!-- Set a label tag to let the user know that the input value should be set. -->
+                    <label for="getCityName">City Name:</label><br>
+                    <!-- Set an input tag to let the user can set the value in it. -->
+                    <input type="text" id="getCityName" placeholder="Enter City's Name" />
+                    <!-- Set an button tag to let the user can submit the input value. -->
+                    <Button type="button" id="cityNamebtn">Add City</Button> <br><br>
+                    <!-- Set a div tag as a box to wrap all Items that user submitted. -->
+                    <div class="citiesList" id="cltiesListItems">
+                        <!-- Set a div tag as a small box to styling every single item that the user submitted. -->
+                        <div class="task">
+                            <!-- Set a span tag with a unique id to set the item that the user submitted. -->
+                            <span class="cityName" id="cityName1"></span>
+                        </div>
+                        <div class="task">
+                            <span class="cityName" id="cityName2"></span>
+                        </div>
+                        <div class="task">
+                            <span class="cityName" id="cityName3"></span>
+                        </div>
+                        <div class="task">
+                            <span class="cityName" id="cityName4"></span>
+                        </div>
+                        <div class="task">
+                            <span class="cityName" id="cityName5"></span>
+                        </div>
+                        <button type="button" id="sortCitiesbtn">Sort</button>
                     </div>
-                    <div class="task">
-                        <span class="cityName" id="cityName2"></span>
-                    </div>
-                    <div class="task">
-                        <span class="cityName" id="cityName3"></span>
-                    </div>
-                    <div class="task">
-                        <span class="cityName" id="cityName4"></span>
-                    </div>
-                    <div class="task">
-                        <span class="cityName" id="cityName5"></span>
-                    </div>
-                    <button id="sortCities" onclick="sortCities()">Sort</button>
-                </div>
-          
+                </fieldset>
+            </form>
         </div>
-        </fieldset>
+
         <!-- Set a div as a container to styling. -->
         <div class="gap"></div>
     </div>
