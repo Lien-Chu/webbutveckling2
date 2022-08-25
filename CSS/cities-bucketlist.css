@@ -1,36 +1,37 @@
-
-/* Add a black background image to the survey-container */
+/* Set box-sizing for us to set width and height more conveniently. */
 body {
   box-sizing: border-box;
 }
-
+/*  Set styling and to justify elements. */
 .bucketlist-container {
-  color:  #706966ec;
-  font-weight:bold ;
+  color: #585554aa;
+  font-weight: bold;
   margin: auto;
   height: auto;
   width: 100%;
 }
 
-/* Add a black background color and opacity to make the text on the image easier to read.*/
+/* Set a back background color to match the background-image. */
 .bucketlist-wrap {
-  background-color: #dfd4d02e;
-  width: 70vw;
+  background-color: #c6bdba17;
+  width: 80vw;
   margin: 0 auto;
+  height: 60vh;
   text-align: left;
 }
 
+/* Set a background image. */
 .gap {
   background-image: url(/image/Cities-Bucketlist-s.jpg);
   background-position: bottom;
   background-repeat: no-repeat;
-  background-size:cover;
-  width: 70vw;
-  height:45vh;
+  background-size: cover;
+  width: 80vw;
+  height: 40vh;
   margin: 0 auto;
 }
 
-/* Style the fieldset to let it meach to survey-wrap div*/
+/* Set styles to the fieldset to let it match to survey-wrap div. */
 fieldset {
   margin-top: 20px;
   font-size: 12px;
@@ -39,110 +40,225 @@ fieldset {
   border-radius: 5px;
 }
 
-input::placeholder
-{
-color: rgb(242, 155, 109);
-font-style: italic;
-font-size: 12px;
-padding-left: 15px;
+/* Set styles to the input's placeholder. */
+input::placeholder {
+  color: rgb(242, 155, 109);
+  font-style: italic;
+  font-size: 10px;
 }
 
+/* Set styles to the input. */
 #getCityName {
   margin: 15px;
   background-color: #dfd4d043;
-  color:  #fc5007c5;
+  color: rgb(242, 155, 109);
   border: 1px solid #110c0a6f;
-  width: 60%;
+  width: 55%;
+  height: 35px;
+  border-radius: 3px;
+  padding-left: 10px;
+}
+
+/* Set styles to the input on hover. */
+#getCityName:hover {
+  margin: 15px;
+  background-color: #ffffff43;
+  color: rgb(242, 155, 109);
+  border: 1px solid #f64804c5;
+  width: 55%;
   height: 35px;
   border-radius: 3px;
   padding-left: 10px;
 }
 
 
-/* Style the Add City bottom.*/
+/* Set styles to the Add City bottom.*/
 #cityNameSubmit {
   margin-bottom: 10px;
-  width: 80px;
+  width: 70px;
   height: 35px;
   background-color: #f95616c5;
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+  font-size: 10px;
+}
+
+/* Change the styles of submit bottom on hover.*/
+#cityNameSubmit:hover {
+  transition: 0.1s ease;
+  background-color: #dfd4d043;
+  color: #f64804c5;
+  border: 1px solid #f64804c5;
+  cursor: pointer;
+}
+
+/* Set styles to task div.*/
+.task {
+  background-color: rgb(228, 223, 221);
+  width: 75%;
+  height: 35px;
+  margin: 5% 13%;
+  padding-top: 10px;
+  padding-left: 10px;
+  border-radius: 5px;
+}
+
+/* Change the style of task div on hover.*/
+.task:hover {
+  transition: 0.1s ease;
+  background-color: #fcfcfc43;
+  border: 1px solid #f64804c5;
+  padding-top: 9px;
+}
+
+/* Set styles to cityName div for input's value.*/
+.cityName {
+  color:  #f64804c5;
+  font-size: 12px;
+}
+
+/* Set styles to the Add City bottom.*/
+#sortCities {
+  margin-bottom: 10px;
+  width: 70px;
+  height: 35px;
+  background-color: #07ab6cc5;
   color: white;
   border: 2px solid white;
   border-radius: 5px;
   font-size: 12px;
 }
 
-/* Change the color of send bottom on hover.*/
-#cityNameSubmit:hover {
+/* Change the styles of submit bottom on hover.*/
+#sortCities:hover {
   transition: 0.1s ease;
   background-color: #dfd4d043;
-  color: #f95616c5;
-  border: 3px solid #110c0a6f;
+  color:#07ab6cc5;
+  border: 2px solid#07ab6cc5;
   cursor: pointer;
 }
 
-.task{
-  background-color: rgb(228, 223, 221);
-  width:95%;
+/* Set styles to the Add City bottom.*/
+#upperCase {
+  margin-bottom: 10px;
+  width: 90px;
   height: 35px;
-  margin: 5%;
-  padding-top: 5px;
-  padding-right: 4px;
+  background-color: #6e6e68c5;
+  color: white;
+  border: 2px solid white;
   border-radius: 5px;
+  font-size: 12px;
 }
 
-#cityName{
-  margin-top: 50px;
-  margin-left: 10px;
-  color: rgb(255, 82, 2);
-  font-size: 14px;
-  height: 35px;
-  cursor: pointer;
-  }  
-
-.delete {
-border-radius: 3px;
-float: right;
-width: 60px;
-height: 25px;
-background-color: #dfd4d043;
-color: #ed3a3ac5;
-border: 2px solid  #ed3a3ac5;
-cursor: pointer;
-border-radius: 5px;
-cursor: pointer;
-}
-
-.delete:hover {
+/* Change the styles of submit bottom on hover.*/
+#upperCase:hover {
   transition: 0.1s ease;
-  background-color: #ed3a3ac5;
-color: white;
-border: 2px solid white;
+  background-color: #dfd4d043;
+  color:#6e6e68c5;
+  border: 2px solid#6e6e68c5;
+  cursor: pointer;
+}
+
+
+/* Small devices (portrait tablets and large phones, 400px and up) */
+@media only screen and (min-width: 425px) {
+  .bucketlist-wrap {
+    width: 75vw;
+    height: 60vh;
+  }
+
+  .gap {
+    width: 75vw;
+  }
+
+  .task {
+    width: 75%;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  .bucketlist-wrap { width: 70vw;}
-  .gap { width: 70vw;}
-  .task{ width: 75%;}
+  .bucketlist-wrap {
+    width: 70vw;
+    height: 60vh;
+  }
+
+  .gap {
+    width: 70vw;
+  }
+
+  .task {
+    width: 75%;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  .bucketlist-wrap { width: 48vw;}
-  .gap { width: 48vw;}
-  .task{ width: 85%;}
+  .bucketlist-wrap {
+    width: 48vw;
+    height: 60vh;
+  }
+  input::placeholder {
+    font-size: 12px;    
+  }
+
+  #cityNameSubmit { 
+    width: 80px; 
+    font-size: 12px;
+  }
+
+  .gap {
+    width: 48vw;
+  }
+
+  .task {
+    width: 75%;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  .bucketlist-wrap { width: 35vw;}
-  .gap { width: 35vw;}
-  .task{ width: 85%;}
+  .bucketlist-wrap {
+    width: 35vw;
+  }
+
+  .gap {
+    width: 35vw;
+  }
+
+  .task {
+    width: 75%;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  .bucketlist-wrap { width: 30vw;}
-  .gap { width: 30vw;}
-  .task{ width: 80%;}
+  .bucketlist-wrap {
+    width: 25vw;
+  }
+
+  .gap {
+    width: 25vw;
+  }
+
+  .task {
+    width: 70%;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1600px and up) */
+@media only screen and (min-width: 1600px) {
+  .bucketlist-wrap {
+    width: 25vw;
+    height: 60vh;
+  }
+
+  .gap {
+    width: 25vw;
+    height: 60vh;
+  }
+
+  .task {
+    width: 65%;
+  }
 }

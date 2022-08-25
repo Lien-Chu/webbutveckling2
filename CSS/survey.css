@@ -1,4 +1,4 @@
-/* Add a black background image to the survey-container */
+/* Set a background image and to justify elements. */
 .survey-container {
   background-image: url(/image/survey-s.jpg); 
   background-repeat: no-repeat;
@@ -8,7 +8,7 @@
   margin: auto;
 }
 
-/* Add a black background color and opacity to make the text on the image easier to read.*/
+/* Set a back background color and opacity to make the text on the image easier to read.*/
 .survey-wrap {
   padding: 2% 2%;
   width: 75%;
@@ -18,7 +18,7 @@
   text-align: left;
 }
 
-/* Style the fieldset to let it meach to survey-wrap div*/
+/* Style the fieldset to let it match to survey-wrap div*/
 fieldset {
   margin-top: 20px;
   font-size: 12px;
@@ -26,7 +26,7 @@ fieldset {
   border-radius: 5px;
 }
 
-/* Style the send bottom.*/
+/* Set the style for the bottom of the send. */
 #send {
   margin-bottom: 10px;
   width: 99%;
@@ -67,8 +67,6 @@ fieldset {
   cursor: pointer;
 }
 
-
-
 /* Let style change automatically according to device screen size..*/
 @media (min-width: 426px) and (max-width: 768px){
 
@@ -101,6 +99,7 @@ fieldset {
   .survey-container {
     background-image: url(/image/survey.jpg); 
     background-position: bottom right;
+    
   }
   
   .survey-wrap {
@@ -151,6 +150,7 @@ fieldset {
 .survey-container {
   background-image: url(/image/survey.jpg); 
   background-position: center right;
+
 }
 
 .survey-wrap {

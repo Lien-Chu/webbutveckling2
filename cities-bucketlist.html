@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/CSS/myCustom.css">
+<!--Create a new stylesheet and add it to the link to add the styles.-->
 <link rel="stylesheet" href="/CSS/cities-bucketlist.css">
 
 <body>
@@ -25,18 +26,52 @@
         <p>Add your favourite cities to the bucketlist!</p>
     </div>
     <br>
+    <!-- Set a div as a container to wrap all element to it to styling and to justify elements. -->
     <div class="bucketlist-container">
+        <!-- Set a div as a wrap to wrap all element to it to styling and to justify elements. -->
         <div class="bucketlist-wrap">
+            <!-- Set a fieldset tag to wrap all input elements to let them match to survey page. -->
             <fieldset>
+             
+                <!-- Set a legend tag to wrap all input elements to let them match to survey page. -->
                 <legend>My Cities</legend>
+                <!-- Set a label tag to let the user know that the input value should be set. -->
                 <label for="getCityName">City Name:</label><br>
+                <!-- Set an input tag to let the user can set the value in it. -->
                 <input type="text" id="getCityName" placeholder="Enter City's Name" />
-                <Button id="cityNameSubmit">Add City</Button> <br><br>
-                <div class="citiesList" id="cltiesListItems"></div>
-            </fieldset><br>
+                <!-- Set an button tag to let the user can submit the input value. -->
+                <Button id="cityNamebtn" onclick="addCities()">Add City</Button> <br><br>
+                <!-- Set a div tag as a box to wrap all Items that user submitted. -->
+            
+                <div class="citiesList" id="cltiesListItems">
+                    <!-- Set a div tag as a small box to styling every single item that the user submitted. -->
+                    <div class="task">
+                        <!-- Set a span tag with a unique id to set the item that the user submitted. -->
+                        <span class="cityName" id="cityName1"></span>
+                    </div>
+                    <div class="task">
+                        <span class="cityName" id="cityName2"></span>
+                    </div>
+                    <div class="task">
+                        <span class="cityName" id="cityName3"></span>
+                    </div>
+                    <div class="task">
+                        <span class="cityName" id="cityName4"></span>
+                    </div>
+                    <div class="task">
+                        <span class="cityName" id="cityName5"></span>
+                    </div>
+                    <button id="sortCities" onclick="sortCities()">Sort</button>
+                </div>
+          
         </div>
+        </fieldset>
+        <!-- Set a div as a container to styling. -->
         <div class="gap"></div>
     </div>
+
+    </div>
+    <!-- Copy footer div from index html and use 3w css class to change it's color. -->
     <div class="footer w3-dark-gray">
         <a href="contactform.html">
             <p>Contact</p>
