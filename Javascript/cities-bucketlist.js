@@ -25,16 +25,26 @@ function addArray() {
 
 // Create a function to sort the Array. 
 document.getElementById('sortCitiesbtn').onclick = function () {
-    for (let i = 0; i < cityName.length; i++) {
-        // Set the method let elements to sorts in < numerical < alphabetical.
-        citiesArray.sort();
-        // Listup array and set the sorted array to display output element.
+    // Set the method let elements to sorts in < numerical < alphabetical.
+    citiesArray.sort();
+  
+    
+    for (let i = 0; i < citiesArray.length; i++) {
+        if (cityName[i] != undefined){
+             // Listup array and set the sorted array to display output element.
         document.getElementById(cityName[i]).innerHTML = (i + 1) + ": " + capitalize(citiesArray[i]);
+        }
+        
     }
+    
+     
 }
 
 // Create a function to upper case the list of array. 
 function capitalize(string) {
+    if (string == undefined){
+        return ""
+    }
     return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
 }
 

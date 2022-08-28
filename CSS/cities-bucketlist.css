@@ -16,7 +16,7 @@ body {
   background-color: #c6bdba17;
   width: 80vw;
   margin: 0 auto;
-  height: 60vh;
+  height: 70vh;
   text-align: left;
 }
 
@@ -27,7 +27,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   width: 80vw;
-  height: 40vh;
+  height:40vh;
   margin: 0 auto;
 }
 
@@ -50,11 +50,11 @@ input::placeholder {
 /* Set styles to the input. */
 #getCityName {
   margin-top: 15px;
-  margin-left: 45px;
+  margin-left: 10%;
   background-color: #dfd4d043;
   color: rgb(242, 155, 109);
   border: 1px solid #110c0a6f;
-  width: 55%;
+  width: 50%;
   height: 35px;
   border-radius: 3px;
   padding-left: 8px;
@@ -71,13 +71,13 @@ input::placeholder {
 /* Set styles to the Add City bottom.*/
 #cityNamebtn {
   margin-bottom: 10px;
-  width: 80px;
+  width: 70px;
   height: 35px;
   background-color: #f95616c5;
   color: white;
   border: 2px solid white;
   border-radius: 5px;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 /* Change the styles of submit bottom on hover.*/
@@ -118,6 +118,7 @@ input::placeholder {
 #sortCitiesbtn {
   transition: 0.2s ease;
   margin-bottom: 10px;
+  margin-left: 12px;
   width: 70px;
   height: 35px;
   background-color: #07ab6cc5;
@@ -141,7 +142,7 @@ input::placeholder {
 @media only screen and (min-width: 425px) {
   .bucketlist-wrap {
     width: 75vw;
-    height: 60vh;
+    height: 65vh;
   }
 
   .gap {
@@ -157,9 +158,13 @@ input::placeholder {
 @media only screen and (min-width: 600px) {
   .bucketlist-wrap {
     width: 70vw;
-    height: 60vh;
+    height: 75vh;
   }
 
+  #getCityName { 
+    margin-left: 15%;
+  }
+  
   .gap {
     width: 70vw;
   }
@@ -173,15 +178,10 @@ input::placeholder {
 @media only screen and (min-width: 768px) {
   .bucketlist-wrap {
     width: 48vw;
-    height: 60vh;
+    height: 75vh;
   }
   input::placeholder {
     font-size: 12px;    
-  }
-
-  #cityNameSubmit { 
-    width: 80px; 
-    font-size: 12px;
   }
 
   .gap {
@@ -199,6 +199,15 @@ input::placeholder {
     width: 35vw;
   }
 
+  #getCityName { 
+    margin-left: 10%;
+  }
+
+  #cityNamebtn {
+    font-size: 12px;
+    width: 85px;
+  }
+
   .gap {
     width: 35vw;
   }
@@ -212,10 +221,12 @@ input::placeholder {
 @media only screen and (min-width: 1200px) {
   .bucketlist-wrap {
     width: 30vw;
+    height: 75vh;
   }
 
   .gap {
     width: 30vw;
+    height: 50vh;
   }
 
   .task {
@@ -223,15 +234,15 @@ input::placeholder {
   }
 }
 /* Extra large devices (large laptops and desktops, 1600px and up) */
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1500px) {
   .bucketlist-wrap {
     width: 25vw;
-    height: 60vh;
+    height: 75vh;
   }
 
   .gap {
     width: 25vw;
-    height: 60vh;
+    height: 50vh;
   }
 
   .task {
