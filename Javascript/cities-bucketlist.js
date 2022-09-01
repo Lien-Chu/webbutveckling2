@@ -27,17 +27,12 @@ function addArray() {
 document.getElementById('sortCitiesbtn').onclick = function () {
     // Set the method let elements to sorts in < numerical < alphabetical.
     citiesArray.sort();
-  
-    
     for (let i = 0; i < citiesArray.length; i++) {
         if (cityName[i] != undefined){
              // Listup array and set the sorted array to display output element.
         document.getElementById(cityName[i]).innerHTML = (i + 1) + ": " + capitalize(citiesArray[i]);
         }
-        
-    }
-    
-     
+    }  
 }
 
 // Create a function to upper case the list of array. 

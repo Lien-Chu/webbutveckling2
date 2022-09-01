@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<title>Responsive Mall.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/CSS/myCustom.css">
+<link rel="stylesheet" href="/CSS/contact.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="/Javascript/contact.js"></script>
+<body>
+    <div class="topnav" id="myTopnav">
+        <div id="myLinks">
+        <a href="/index.html">Home</a>
+        <a href="/london.html">London</a>
+        <a href="/paris.html">Paris</a>
+        <a href="/tokyo.html">Tokyo</a>
+        <a href="/cities-bucketlist.html">Cities Bucketlist</a> 
+        <a href="/survey.html">Survey</a> <!-- Lägg till länk till survey-sidan-->
+        <a href="/contact.html" class="w3-khaki">Contact</a>
+    </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <div class="w3-container w3-khaki">
+        <h1>Contact</h1>
+    </div>
+    <br>
+    <div class="contact-container">
+        <div class="contact-wrap" id="formQuestion1">
+            <fieldset>
+                <legend>Your coordinates please</legend>
+                <form>
+                    <!-- <span> tag for change the text color to red in it-->                
+                    <label for="txtName">Name: <span>*</span></label> <br>
+                    <input type="text" id="txtName" placeholder="Your name" /><br>
+                    <label for="txtEmail">Email: <span>*</span></label> <br>
+                    <input type="email" id="txtEmail" placeholder="Your email address" /><br>
+                    <label for="selCity">City: <span>*</span></label> <br>
+                    <select id="selCity">
+                        <option selected value="">Choose a city</option>
+                        <option value="Tokyo">Tokyo</option>
+                        <option value="London">London</option>
+                        <option value="Paris">Paris</option>
+                    </select><br><br>
+                    <label for="msg">Message: <span>*</span></label> <br>
+                    <textarea id="msg" name="msg" placeholder="Your message"
+                        style="width:95%;height:100px"></textarea><br>
+                    <input type="button" id="bt" value="Send" />
+                </form><br>
+                <div style="position: absolute;">
+                    <!-- Put images to create animations-->
+                    <img id="show" src="/image/please.png" width="300px">
+                    <img id="hide" src="/image/thankyou.png" width="200px">
+                   
+                   
+
+                </div><br><br><br><br>
+            </fieldset>
+        </div>
+    </div>
+    <div class="footer w3-khaki">
+        <a href="/index.html">
+            <p>Home</p>
+        </a>
+    </div>
+
+</body>
+
+</html>
