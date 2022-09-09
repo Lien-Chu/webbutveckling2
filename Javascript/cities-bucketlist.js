@@ -2,6 +2,7 @@
 let i = 0;
 let citiesArray = [];
 let cityName = ['cityName1', 'cityName2', 'cityName3', 'cityName4', 'cityName5']
+let cityNampeInput = document.getElementById('getCityName');
 
 /* Set an onclick event to add the city button. */
 document.getElementById('cityNamebtn').onclick = function () {
@@ -21,6 +22,7 @@ function addArray() {
     i++;
     if (i == citiesArray.length + 1)
         i = 0;
+    document.getElementById('message').innerHTML = (cityNampeInput.value.toUpperCase()) + ' is a beautiful city with the first letter ' + (cityNampeInput.value).charAt(0).toUpperCase() + ' and ' + (cityNampeInput.value).slice(1).length+' more letters!'+' Now my city list contains '+ citiesArray.length +' cities!';
 }
 
 // Create a function to sort the Array. 
@@ -28,16 +30,18 @@ document.getElementById('sortCitiesbtn').onclick = function () {
     // Set the method let elements to sorts in < numerical < alphabetical.
     citiesArray.sort();
     for (let i = 0; i < citiesArray.length; i++) {
-        if (cityName[i] != undefined){
-             // Listup array and set the sorted array to display output element.
-        document.getElementById(cityName[i]).innerHTML = (i + 1) + ": " + capitalize(citiesArray[i]);
+        if (cityName[i] != undefined) {
+            // Listup array and set the sorted array to display output element.
+            document.getElementById(cityName[i]).innerHTML = (i + 1) + ": " + capitalize(citiesArray[i]);
         }
-    }  
+    }
+    document.getElementById('message').innerHTML = "This is the list of my dream travel cities!";
 }
+
 
 // Create a function to upper case the list of array. 
 function capitalize(string) {
-    if (string == undefined){
+    if (string == undefined) {
         return ""
     }
     return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();

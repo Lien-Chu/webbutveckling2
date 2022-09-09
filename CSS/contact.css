@@ -1,91 +1,127 @@
 body {
-    box-sizing: border-box;
-  }
-  /*  Set styling and to justify elements. */
-  .contact-container {
-    color: #585554aa;
-    font-weight: bold;
-    margin:0 auto;
-    height: auto;
-    width: 100%;
-    font-size: 12px;
-  }
-  
-  /* Set a back background color to match the background-image. */
-  .contact-wrap {
-    width: 80vw;
-    margin: 0 auto;
-    height: 70vh;
-    text-align: left;
-  }
+  box-sizing: border-box;
+}
 
-    /* Set the from aligning in the center. */
-  fieldset{
-    margin: 0 auto;
-    width: 75vw;
-  }
+/*  Set styling and to justify elements. */
+.contact-container {
+  color: #585554aa;
+  font-weight: bold;
+  margin: 0 auto;
+  height: auto;
+  width: 60vw;
+  font-size: 12px;
+  display: flex;
+}
 
-  #show {
-    width: 300px;
-   } 
-   
-   #hide {
-    width: 200px;
-   }
-   
-  /* Medelstora devices (portrait tablets and large phones, 1000px and up) */
-  @media only screen and (min-width: 600px) {
-     fieldset{
-       width: 50vw;
-     }
-   }
- 
-     /* Medelstora devices (portrait tablets and large phones, 1000px and up) */
-  @media only screen and (min-width: 768px) {
-    fieldset{
-      width: 45vw;
-    }
+.image {
+  position: relative;
+  width: 25vw;
+  height: 65vh;
+  background-image: url('/image/backgroung-image2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left:0;
+  border-radius: 5px;
+}
+
+/* Set a back background color to match the background-image. */
+.contact-wrap {
+  position: relative;
+  width: 35vw;
+  height: 70vh;
+  margin: 0 auto;
+  text-align: left;
+  align-items: right;
+
+}
+
+/* Set the from aligning in the center. */
+fieldset {
+  width: 30vw;
+  border: 0.5px solid rgba(137, 142, 132, 0.552);
+  border-radius: 5px;
+  margin: 0 auto;
+  height: 65vh;
+}
+
+#show {
+  width: 300px;
+}
+
+#hide {
+  width: 200px;
+}
+
+.invalid {
+  border: 2px solid rgb(219, 68, 60);
+  border-radius: 5px;
+}
+
+.valid {
+  border: 1px solid rgb(44, 85, 2);
+  border-radius: 5px;
+}
+
+.bt {
+  border: 2px solid rgb(74, 146, 2);
+  background-color: rgb(43, 196, 43);
+  border-radius: 5px;
+  color: white;
+}
+
+/* Medelstora devices (portrait tablets and large phones, 1000px and up) */
+@media only screen and (min-width: 600px) {
+  fieldset {
+    width: 50vw;
   }
+}
+
+/* Medelstora devices (portrait tablets and large phones, 1000px and up) */
+@media only screen and (min-width: 768px) {
+  fieldset {
+    width: 45vw;
+  }
+}
 
 
-  /* Medelstora devices (portrait tablets and large phones, 1000px and up) */
-  @media only screen and (min-width: 1000px) {
-    fieldset{
-      width: 35vw;
-    }
+/* Medelstora devices (portrait tablets and large phones, 1000px and up) */
+@media only screen and (min-width: 1000px) {
+  fieldset {
+    width: 35vw;
   }
+}
 
-  /* Stora devices (portrait tablets and large phones, 1200px and up) */
-  @media only screen and (min-width: 1200px) {
-    fieldset{
-      width: 30vw;
-    }
+/* Stora devices (portrait tablets and large phones, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  fieldset {
+    width: 30vw;
   }
+}
 
-  /* Stora devices (portrait tablets and large phones, 1440px and up) */
-  @media only screen and (min-width: 1440px) {
-    fieldset{
-      width: 22vw;
-    }
+/* Stora devices (portrait tablets and large phones, 1440px and up) */
+@media only screen and (min-width: 1440px) {
+  fieldset {
+    width: 22vw;
   }
+}
 
-  /* Stora devices (portrait tablets and large phones, 1600px and up) */
-  @media only screen and (min-width: 1600px) {
-    fieldset{
-      width: 25vw;
-    }
+/* Stora devices (portrait tablets and large phones, 1600px and up) */
+@media only screen and (min-width: 1600px) {
+  fieldset {
+    width: 25vw;
   }
+}
 
-  /* Stora devices (portrait tablets and large phones, 1870px and up) */
-  @media only screen and (min-width: 1870px) {
-    fieldset{
-      width: 20vw;
-    }
+/* Stora devices (portrait tablets and large phones, 1870px and up) */
+@media only screen and (min-width: 1870px) {
+  fieldset {
+    width: 20vw;
   }
+}
 
-  /* Stora devices (portrait tablets and large phones, 2560px and up) */
-  @media only screen and (min-width: 2560px) {
-    fieldset{
-      width: 10vw;
-    }
+/* Stora devices (portrait tablets and large phones, 2560px and up) */
+@media only screen and (min-width: 2560px) {
+  fieldset {
+    width: 10vw;
   }
+}
