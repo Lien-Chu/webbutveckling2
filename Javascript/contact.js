@@ -20,12 +20,10 @@ $(document).ready(function () {
                 $("#hide").animate({
                     transition: 2,
                     top: 100,
-                    width: '300px'
+                    width: '90%'
                 })
-
             });
         });
-        //  alert('Form has been sent');
     });
 
     // Save file code in a function
@@ -64,90 +62,62 @@ $(document).ready(function () {
         $("#show").hide();
         var $parent = $(this).parent();
         $parent.find(".formtips").remove();
-
+        
         //Verify User Name Format
-        // if ($(this).is('#txtName')) {
-        //     if (this.value == "" || this.value.length < 3) {
-        //         var errorMessage = 'Please enter a username of at least 3 characters.';
-        //         $(this).addClass("invalid");
-        //         $(this).effect("shake");
-        //         $parent.append('<span class="formtips onError"><br><br>' + errorMessage + '</span>');
-        //     }
-        //     else {
-        //         $(this).addClass("valid");
-        //         $('#txtEmail').attr('disabled', false);
-        //     }
-        // }
-        // //Verify Email Format
-        // if ($(this).is('#txtEmail')) {
-        //     if (this.value == "" || (this.value != "" && !/.+@.+\.[a-zA-Z]{2,4}$/.test(this.value))) {
-        //         var errorMessage = 'Please enter the correct E-mail address.';
-        //         $(this).addClass("invalid");
-        //         $(this).effect("shake");
-        //         $parent.append('<span class="formtips onError"><br><br>' + errorMessage + '</span>');
-        //     }
-        //     else {
-        //         $(this).addClass("valid");
-        //         $('#selCity').attr('disabled', false);
-        //     }
-        // }
-        // if ($(this).is('#mySelectBox option')) {
-        //     if (this.filter(':selected').text() !== Tokyo || this.filter(':selected').text() !== London || this.filter(':selected').text() !== Paris) {
-        //         var errorMessage = 'Please choose a city.';
-        //         $(this).addClass("invalid");
-        //         $(this).effect("shake");
-        //         $parent.append('<span class="formtips onError"><br><br>' + errorMessage + '</span>');
-        //     }
-        //     else {
-        //         $('#msg').attr('disabled', false);
-        //         $('#selCity').addClass("valid");
-        //     }
-        // }
-
-
-        $('#mySelectBox ').change(function() { 
-            if (!$(this).val() === "" ){
-                alert("蝦餃?");
-                $('#msg').attr('disabled', false);
-                $('#selCity').addClass("valid");
-            }
-            else {           
-                var errorMessage = 'Please choose a city.';
+        if ($(this).is('#txtName')) {
+            if (this.value == "" || this.value.length < 3) {
                 $(this).addClass("invalid");
-                $(this).effect("shake");
-                alert("?蝦餃?");
-                $parent.append('<span class="formtips onError"><br><br>' + errorMessage + '</span>');
-            }
-        })
-
-
-        // $('#selCity option').each(function () {
-        //     if ($(this).prop('selected').length === 0) {
-        //         var errorMessage = 'Please choose a city.';
-        //         $(this).addClass("invalid");
-        //         $(this).effect("shake");
-        //         $parent.append('<span class="formtips onError"><br><br>' + errorMessage + '</span>');
-        //     } else {
-        //         $('#msg').attr('disabled', false);
-        //         $('#selCity').addClass("valid");
-        //     }
-        // })
-
-        if ($(this).is('#msg')) {
-            if (this.value == "") {
-                $(this).addClass("invalid");
-                $(this).effect("shake");
-                var errorMessage = 'Please leave a message.';
+                var errorMessage = 'Please enter a username of at least 3 characters.';
                 $parent.append('<span class="formtips onError"><br><br>' + errorMessage + '</span>');
             }
             else {
                 $(this).addClass("valid");
-                document.getElementById("bt").disabled = false;
-                $('#bt').addClass("bt");
-
+                $('#txtEmail').attr('disabled', false);
             }
         }
 
-    })
+        //Verify Email Format
+        if ($('#txtEmail').prop('disabled') == false) {
+            if ($(this).is('#txtEmail')) {
+                if (this.value == "" || (this.value == "" && !/.+@.+\.[a-zA-Z]{2,4}$/.test(this.value))) {
+                    $(this).addClass("invalid");
+                    var errorEmailMessage = 'Please enter the correct E-mail address.';
+                    $parent.append('<span class="formtips onError"><br><br>' + errorEmailMessage + '</span>');
+                }
+                else {
+                    $(this).addClass("valid");
+                    $('#selCity').attr('disabled', false);
+                }
+            }
+        }
 
+        //Verify select Format
+        if ($('#selCity').prop('disabled') == false) {
+            if ($('#selCity option:selected').val() !== "") {
+                $('#msg').attr('disabled', false);
+                $('#selCity').addClass("valid");
+            }
+            else {
+                $(this).addClass("invalid");
+                var errorSelectMessage = 'Please choose a city.';
+                $parent.append('<span class="formtips onError"><br><br>' + errorSelectMessage + '</span>');
+            }
+        }
+
+        //Verify Message Format
+        if ($('#msg').prop('disabled') == false) {
+            if ($(this).is('#msg')) {
+                if (this.value == "") {
+                    $(this).addClass("invalid");
+                    var errorMsgMessage = 'Please leave a message.';
+                    $parent.append('<span class="formtips onError"><br><br>' + errorMsgMessage + '</span>');
+                }
+                else {
+                    $(this).addClass("valid");
+                    document.getElementById("bt").disabled = false;
+                    $('#bt').addClass("bt");
+                }
+            }
+        }
+    })
 });
