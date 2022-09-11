@@ -2,49 +2,41 @@
 body {
   box-sizing: border-box;
 }
+
 /*  Set styling and to justify elements. */
 .bucketlist-container {
+  background-image: url("/image/80808.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #585554aa;
   font-weight: bold;
   margin: auto;
-  height: auto;
   width: 100%;
+  height: auto;
 }
 
 /* Set a back background color to match the background-image. */
 .bucketlist-wrap {
-  background-color: #c6bdba17;
-  width: 80vw;
-  margin: 0 auto;
-  height: 70vh;
+  background-color: #0808078b;
+  width: 70vw;
+  margin: 1% auto;
   text-align: left;
-}
-
-/* Set a background image. */
-.gap {
-  background-image: url(/image/Cities-Bucketlist-s.jpg);
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 80vw;
-  height:40vh;
-  margin: 0 auto;
+  color: white;
+  padding: 1%;
+  font-size: 10px;
+  height: auto;
 }
 
 /* Set styles to the fieldset to let it match to survey-wrap div. */
 fieldset {
-  margin-top: 20px;
-  font-size: 12px;
-  padding: 15px;
-  margin: 15px;
+  margin: 5%;
   border-radius: 5px;
 }
 
 /* Set styles to the input's placeholder. */
 input::placeholder {
-  color: rgb(242, 155, 109);
+  color: rgba(239, 216, 204, 0.793);
   font-style: italic;
-  font-size: 10px;
 }
 
 /* Set styles to the input. */
@@ -65,19 +57,18 @@ input::placeholder {
   background-color: #ffffff43;
   color: rgb(242, 155, 109);
   border: 1px solid #f64804c5;
+
 }
 
 
 /* Set styles to the Add City bottom.*/
 #cityNamebtn {
-  margin-bottom: 10px;
-  width: 80px;
+  width: 30%;
   height: 35px;
   background-color: #f95616c5;
   color: white;
   border: 2px solid white;
   border-radius: 5px;
-  font-size: 10px;
 }
 
 /* Change the styles of submit bottom on hover.*/
@@ -93,11 +84,12 @@ input::placeholder {
 .task {
   background-color: rgb(228, 223, 221);
   width: 75%;
-  height: 35px;
-  margin: 5% 13%;
-  padding-top: 10px;
-  padding-left: 10px;
+  height: 30px;
+  margin-bottom: 8%;
+  margin-left: 12%;
+  padding-bottom: 20px;
   border-radius: 5px;
+  padding-left: 5px;
 }
 
 /* Change the style of task div on hover.*/
@@ -110,8 +102,8 @@ input::placeholder {
 
 /* Set styles to cityName div for input's value.*/
 .cityName {
-  color:  #f64804c5;
-  font-size: 12px;
+  color: #f64804c5;
+
 }
 
 /* Set styles to the Add City bottom.*/
@@ -125,98 +117,48 @@ input::placeholder {
   color: white;
   border: 2px solid white;
   border-radius: 5px;
-  font-size: 12px;
 }
 
 /* Change the styles of submit bottom on hover.*/
 #sortCitiesbtn:hover {
   transition: 0.1s ease;
   background-color: #dfd4d043;
-  color:#07ab6cc5;
+  color: #07ab6cc5;
   border: 2px solid#07ab6cc5;
   cursor: pointer;
 }
 
 #message{
-  margin: 10%;
+  margin: 5%;
 }
 
 /* Small devices (portrait tablets and large phones, 400px and up) */
 @media only screen and (min-width: 425px) {
   .bucketlist-wrap {
-    width: 75vw;
-    height: 65vh;
-  }
-
-  .gap {
-    width: 75vw;
-  }
-
-  .task {
-    width: 75%;
+    width: 60vw;
+    font-size: 10px;
   }
 }
-
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .bucketlist-wrap {
-    width: 70vw;
-    height: 75vh;
-  }
-
-  #getCityName { 
-    margin-left: 15%;
-  }
-  
-  .gap {
-    width: 70vw;
-  }
-
-  .task {
-    width: 75%;
+    width: 50vw;
+    font-size: 12px;
   }
 }
-
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .bucketlist-wrap {
-    width: 48vw;
-    height: 75vh;
-  }
-  input::placeholder {
-    font-size: 12px;    
-  }
-
-  .gap {
-    width: 48vw;
-  }
-
-  .task {
-    width: 75%;
+    width: 45vw;
+    font-size: 13px;
   }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .bucketlist-wrap {
-    width: 35vw;
-  }
-
-  #getCityName { 
-    margin-left: 10%;
-  }
-
-  #cityNamebtn {
-    font-size: 12px;
-    width: 85px;
-  }
-
-  .gap {
-    width: 35vw;
-  }
-
-  .task {
-    width: 75%;
+    width: 40vw;
+    font-size: 14px;
   }
 }
 
@@ -224,31 +166,21 @@ input::placeholder {
 @media only screen and (min-width: 1200px) {
   .bucketlist-wrap {
     width: 30vw;
-    height: 75vh;
-  }
-
-  .gap {
-    width: 30vw;
-    height: 50vh;
-  }
-
-  .task {
-    width: 70%;
+    font-size: 14px;
   }
 }
+
 /* Extra large devices (large laptops and desktops, 1600px and up) */
-@media only screen and (min-width: 1500px) {
+@media only screen and (min-width: 1600px) {
   .bucketlist-wrap {
     width: 25vw;
-    height: 75vh;
+    font-size: 14px;
   }
+}
 
-  .gap {
-    width: 25vw;
-    height: 50vh;
-  }
-
-  .task {
-    width: 65%;
+@media only screen and (min-width: 1800px) {
+  .bucketlist-wrap {
+    width: 23vw;
+    font-size: 14px;
   }
 }
