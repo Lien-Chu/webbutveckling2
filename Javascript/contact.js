@@ -1,29 +1,34 @@
 $(document).ready(function () {
-    // Hides thankyou.png
+    // Show the image with fadeTo effect.
+    $(".image").fadeTo("slow", 0.4);
+    $(".image").fadeTo("slow", 1);
+    // Hide the thankyou.png image.
     $("#hide").hide();
-    // Hides please.png
+    // Hide the please.png image.
     $("#show").hide();
-    // Show the plesse.png with animation.
-    $("#show").fadeIn(1500);
+    // Show the plesse.png with fadeIn effect.
+    $("#show").fadeTo("slow", 0.4);
+    $("#show").fadeTo("slow", 1);
+    // Lock the button.
     document.getElementById("bt").disabled = true;
-
     // Example code to prevent sending file before the form is ready
     function preventSave() {
         document.getElementById("bt").disabled = true;
     }
 
-    // At click send file then shows the plesse.png with animation.
+    // Set function for save the file and shows the please.png with animation.
     $("#bt").click(function () {
         saveFile()
-        $("#show").fadeOut(1000, function () {
-            $("#hide").fadeIn(1500, function () {
-                $("#hide").animate({
-                    transition: 2,
-                    top: 100,
-                    width: '90%'
-                })
-            });
+        // Show the thankyou.png with fadeIn effect and animation callback function.
+        $("#hide").fadeIn(1500, function () {
+            $("#hide").animate({
+                transition: 2,
+                top: 100,
+                width: '100%'
+            })
         });
+        // Hide the button after save file.
+        $("#bt").hide();
     });
 
     // Save file code in a function
@@ -42,9 +47,10 @@ $(document).ready(function () {
 
         // Convert the text to BLOB.
         const textToBLOB = new Blob([data], { type: 'text/plain' });
-        const sFileName = 'formData.txt'; // The file to save the data.
+        // Set the file to save the data.
+        const sFileName = 'formData.txt';
 
-        // Create a link which will have downloadable URL created from the blob object 
+        // Create a link which will have downloadable URL created from the blob object. 
         let newLink = document.createElement("a");
         newLink.download = sFileName;
         if (window.webkitURL != null) {
@@ -58,34 +64,49 @@ $(document).ready(function () {
         newLink.click();
     }
 
-    $('form :input').blur(function () {
-        $("#show").hide();
+
+    // Set a function to check the input values when focus is removed from the input.
+    $('form :input').blur(function (e) {
+        e.preventDefault();
+         // Hide the plesse.png with fadeOut effect.
+        $("#show").fadeOut(1000);
         var $parent = $(this).parent();
         $parent.find(".formtips").remove();
-        
-        //Verify User Name Format
+
+        // Verify User Name Format.
         if ($(this).is('#txtName')) {
+            // Set the invalid conditions.
             if (this.value == "" || this.value.length < 3) {
-                $(this).addClass("invalid");
+                // Add a CSS style to notify the user the input is invalid.
+                $(this).effect("bounce", 800);
+                $(this).css("border", "2px solid #ff6666");
+                // Add a error message to notify the user the input is invalid.
                 var errorMessage = 'Please enter a username of at least 3 characters.';
+                // Create a span to show the error message.
                 $parent.append('<span class="formtips onError"><br><br>' + errorMessage + '</span>');
             }
             else {
-                $(this).addClass("valid");
+                // Unlock the next input.
                 $('#txtEmail').attr('disabled', false);
             }
         }
 
-        //Verify Email Format
+        // Verify Email Format.
         if ($('#txtEmail').prop('disabled') == false) {
             if ($(this).is('#txtEmail')) {
-                if (this.value == "" || (this.value == "" && !/.+@.+\.[a-zA-Z]{2,4}$/.test(this.value))) {
-                    $(this).addClass("invalid");
+                // Set the invalid conditions.
+                if (this.value == "" || (this.value !== "" && !/.+@.+\.[a-zA-Z]{2,4}$/.test(this.value))) {
+                    // Set a bounce effect to notify the user the input is invalid.
+                    $(this).effect("bounce", 800);
+                     // Set a CSS style to notify the user the input is invalid.
+                    $(this).css("border", "2px solid #ff6666");
+                    // Add a error message to notify the user the input is invalid.
                     var errorEmailMessage = 'Please enter the correct E-mail address.';
+                    // Create a span to show the error message.
                     $parent.append('<span class="formtips onError"><br><br>' + errorEmailMessage + '</span>');
                 }
                 else {
-                    $(this).addClass("valid");
+                    // Unlock the next input.
                     $('#selCity').attr('disabled', false);
                 }
             }
@@ -93,13 +114,20 @@ $(document).ready(function () {
 
         //Verify select Format
         if ($('#selCity').prop('disabled') == false) {
+            // Set the valid conditions.
             if ($('#selCity option:selected').val() !== "") {
+                // Unlock the next input.
                 $('#msg').attr('disabled', false);
-                $('#selCity').addClass("valid");
             }
             else {
-                $(this).addClass("invalid");
+               
+                // Set a bounce effect to notify the user the input is invalid.
+                $(this).effect("bounce", 800);
+                 // Set a CSS style to notify the user the input is invalid.
+                $(this).css("border", "2px solid #ff6666");
+                // Add a error message to notify the user the input is invalid.
                 var errorSelectMessage = 'Please choose a city.';
+                // Create a span to show the error message.
                 $parent.append('<span class="formtips onError"><br><br>' + errorSelectMessage + '</span>');
             }
         }
@@ -107,15 +135,22 @@ $(document).ready(function () {
         //Verify Message Format
         if ($('#msg').prop('disabled') == false) {
             if ($(this).is('#msg')) {
+                // Set the invalid conditions.
                 if (this.value == "") {
-                    $(this).addClass("invalid");
+                    // Set a bounce effect to notify the user the input is invalid.
+                    $(this).effect("bounce", 1000);
+                     // Set a CSS style to notify the user the input is invalid.
+                    $(this).css("border", "2px solid #ff6666");
+                    // Add a error message to notify the user the input is invalid.
                     var errorMsgMessage = 'Please leave a message.';
+                    // Create a span to show the error message.
                     $parent.append('<span class="formtips onError"><br><br>' + errorMsgMessage + '</span>');
                 }
                 else {
-                    $(this).addClass("valid");
+                    // Unlock the button.
                     document.getElementById("bt").disabled = false;
-                    $('#bt').addClass("bt");
+                    // Set CSS style to show the button is available.
+                    $('#bt').css("border", "2px solid #228B22");
                 }
             }
         }

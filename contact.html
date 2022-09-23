@@ -33,10 +33,9 @@
     <div class="contact-container">
         <div class="contact-wrap" >
             <fieldset>
-
                 <legend>Your coordinates please</legend>
                 <div class="image"></div>
-                <form>
+                <form id="form">
                     <!-- <span> tag for change the text color to red in it-->
                     <label for="txtName">Name: <span>*</span></label> <br>
                     <input class="form-group" type="text" id="txtName" placeholder="Your name" /> <br>
@@ -50,7 +49,7 @@
                         <option value="Paris">Paris</option>
                     </select> <br> <br>
                     <label for="msg">Message: <span>*</span></label> <br>
-                    <textarea id="msg" name="msg" placeholder="Your message" style="width:95%;height:100px"
+                    <textarea id="msg" name="msg" placeholder="Your message" style="height:100px"
                         disabled></textarea>
                     <input type="button" id="bt" value="Send" />
                     <div id="massage" style="position: absolute;"> </div>
@@ -63,7 +62,6 @@
             </fieldset>
         </div>
     </div>
-
     <div class="footer w3-blue-gray">
         <a href="/index.html">
             <p>Home</p>

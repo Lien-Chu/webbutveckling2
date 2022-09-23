@@ -11,169 +11,147 @@ body {
   width: 80vw;
   font-size: 12px;
   display: flex;
-  height: 100%;
 }
 
 /* Set a back background color to match the background-image. */
 .contact-wrap {
   position: relative;
   width: 70vw;
-  margin: 5% auto;
   text-align: left;
   align-items: right;
+  height: 80vh;
 }
 
+/* Set a block for an image. */
 .image {
-  position: relative;
-  width: 50%;
-  height: 60vh;
-  background-image: url('/image/backgroung-image2.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  left: 0;
-  border-radius: 3px;
   display: none;
 }
+
+form {
+  width: 100%;
+  margin-left: 5%;
+}
+
 
 /* Set the from aligning in the center. */
 fieldset {
   display: flex;
   width: 65vw;
-  height: 100%;
+  height: 90%;
   border: 0.5px solid rgba(137, 142, 132, 0.552);
   border-radius: 5px;
   margin: 0 auto;
   padding: 5%;
 }
 
+/* Set input's style. */
 input,
 section,
 textarea {
-  margin-bottom: 5%;
-  width: 90%;
+  margin-bottom: 3%;
+  width: 100%;
 }
 
+/* Set button's style. */
 #bt {
   margin: 5px;
   height: 35px;
-  width: 95.5%;
+  width: 100%;
   margin-left: 0;
 }
 
-.invalid {
-  border: 2px solid rgb(219, 68, 60);
-  animation: shake 0.5s;
-  border-radius: 3px;
-}
-
-.valid {
-  border: 1px solid rgb(39, 69, 10);
-  border-radius: 3px;
-}
-
-.bt {
-  border: 2px solid rgb(68, 96, 124);
-  background-color: rgb(99, 142, 159);
-  border-radius: 3px;
+/* Set the button hover style when the button is available. */
+#bt:hover {
+  border: 2px solid rgb(98, 116, 79);
+  background-color: rgb(82, 160, 82);
   color: white;
   cursor: pointer;
 }
 
-.bt:hover {
-  border: 2px solid rgb(206, 236, 176);
-  background-color: rgb(68, 159, 68);
-  color: white;
-}
-
 #show {
-  width: 80%;
+  width: 90%;
 }
 
 #hide {
-  width: 70%;
+  width: 90%;
 }
 
-@keyframes shake {
-  0% {transform: translate(1px, 1px) rotate(0deg);}
-  10% {transform: translate(-1px, -2px) rotate(-1deg);}
-  20% {transform: translate(-3px, 0px) rotate(1deg);}
-  30% {transform: translate(3px, 2px) rotate(0deg);}
-  40% {transform: translate(1px, -1px) rotate(1deg);}
-  50% {transform: translate(-1px, 2px) rotate(-1deg);}
-  60% {transform: translate(-3px, 1px) rotate(0deg);}
-  70% {transform: translate(3px, 1px) rotate(-1deg);}
-  80% {transform: translate(-1px, -1px) rotate(1deg);}
-  90% {transform: translate(1px, 2px) rotate(0deg);}
-  100% {transform: translate(1px, -2px) rotate(-1deg);}
-}
-
-/* Medelstora devices (portrait tablets and large phones, 1000px and up) */
+/* Medelstora devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   fieldset {
     width: 50vw;
   }
 }
-  /* Medelstora devices (portrait tablets and large phones, 1000px and up) */
-  @media only screen and (min-width: 768px) {
-    .contact-wrap {
-      margin-top: 0;
-    }
 
-    fieldset {
-      right: 0;
-      display: flex;
-      width: 80vw;
-    }
-
-    .image {
-      width: 80%;
-      display: flex;
-    }
-
-    form {
-      width: 40%;
-      margin-left: 5%;
-    }
+/* Medelstora devices (portrait tablets and large phones, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .contact-wrap {
+    width: 80vw;
+    margin-top: 0;
   }
 
-  /* Medelstora devices (portrait tablets and large phones, 1000px and up) */
-  @media only screen and (min-width: 1000px) {
-    fieldset {
-      padding-top: 3%;
-      padding-bottom: 3%;
-      width: 60vw;
-    }
+  fieldset {
+    right: 0;
+    display: flex;
+    width: 80vw;
+    height: 60vh;
+    margin-top: 50px;
+    border: 0.5px solid rgb(159, 158, 155);
+    padding: 3%;
   }
 
-  /* Stora devices (portrait tablets and large phones, 1200px and up) */
-  @media only screen and (min-width: 1200px) {
-    fieldset {    
-      width: 55vw;
-    }
+  .image {
+    position: relative;
+    width: 60%;
+    height: 50vh;
+    background-image: url('/image/backgroung-image3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right center;
+    left: 0;
+    border-radius: 3px;
   }
 
-  /* Stora devices (portrait tablets and large phones, 1440px and up) */
-  @media only screen and (min-width: 1440px) {
-    fieldset {
-      width: 50vw;
-    }
+  form {
+    width: 40%;
+    padding-left: 3%;
   }
+}
 
-  /* Stora devices (portrait tablets and large phones, 1600px and up) */
-  @media only screen and (min-width: 1600px) {
-    fieldset {
-      width: 45vw;
-    }
+/* Medelstora devices (portrait tablets and large phones, 1000px and up) */
+@media only screen and (min-width: 1000px) {
+  fieldset {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    width: 60vw;
   }
+}
 
-  @media only screen and (min-width: 1800px) {
-    fieldset {
-      width: 40vw;
-    }
+/* Stora devices (portrait tablets and large phones, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  fieldset {
+    width: 55vw;
   }
+}
 
-  @media only screen and (min-width: 2100px) {
-    fieldset {
-      width: 35vw;
-    }
+/* Stora devices (portrait tablets and large phones, 1440px and up) */
+@media only screen and (min-width: 1440px) {
+  fieldset {
+    width: 50vw;
   }
+}
+
+/* Stora devices (portrait tablets and large phones, 1600px and up) */
+@media only screen and (min-width: 1600px) {
+  fieldset {
+    width: 45vw;
+    padding-top: 2%;
+  }
+}
+
+/* Stora devices (portrait tablets and large phones, 1800px and up) */
+@media only screen and (min-width: 1800px) {
+  fieldset {
+    width: 35vw;
+  }
+}
