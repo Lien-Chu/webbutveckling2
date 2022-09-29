@@ -17,8 +17,7 @@ $(document).ready(function () {
         element.stop().animate({ height: autoHeight }, parseInt(time));
     }
 })
-
-function myFunction() {
+   function myFunction() {
     var x = document.getElementById("myTopnav");
     if (x.style.display === "block") {
       x.style.display = "none";
@@ -26,4 +25,3 @@ function myFunction() {
       x.style.display = "block";
     }
   }
-  

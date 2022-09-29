@@ -73,8 +73,14 @@ textarea {
 }
 
 #hide {
-  width: 90%;
+  width: 100%;
+  height: 50px;
 }
+
+.invalid {
+  border: 2px solid rgb(244, 82, 12); 
+  }
+  
 
 /* Medelstora devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
@@ -100,6 +106,7 @@ textarea {
     padding: 3%;
   }
 
+  /* Add a image */
   .image {
     position: relative;
     width: 60%;
@@ -116,8 +123,8 @@ textarea {
     width: 40%;
     padding-left: 3%;
   }
-}
 
+}
 /* Medelstora devices (portrait tablets and large phones, 1000px and up) */
 @media only screen and (min-width: 1000px) {
   fieldset {

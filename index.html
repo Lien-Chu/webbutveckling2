@@ -5,49 +5,59 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/CSS/myCustom.css">
+<link rel="stylesheet" href="/CSS/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="/Javascript/privacypolicycookies.js"></script>
+<script src="/Javascript/js.js"></script>
 <body>
 
 <div class="topnav" id="myTopnav">
-    <a href="/index.html" class="w3-pale-yellow active">Home</a>
-    <a href="/london.html">London</a>
+    <!-- <a href="/index.html" class="w3-pale-yellow active">Home</a> -->
+    <!-- <a href="/london.html">London</a>
     <a href="/paris.html">Paris</a>
     <a href="/tokyo.html">Tokyo</a>
     <a href="/cities-bucketlist.html">Cities Bucketlist</a> 
-    <a href="/survey.html">Survey</a> <!-- Lägg till länk till survey-sidan-->
-    <a href="/contact.html">Contact</a>
+    <a href="/survey.html">Survey</a> 
+    <a href="/contact.html">Contact</a> -->
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
     </a>
 </div>
-
-<div class="w3-container w3-pale-yellow">
-  <h1>Responsive Demo</h1> 
-  <p>Resize this responsive page!</p> 
+<div class="main-content">
+  <div class="portfolio">
+  <div class="portfolio-item medium one" id="one">
+    <a href="/survey.html">Survey</a> 
+  </div>
+  <div class="portfolio-item large tow" >
+    <a href="/paris.html" id="tow">Paris</a>
+  </div>
+  <div class="portfolio-item medium three" id="three">       
+    <a href="/cities-bucketlist.html">Cities Bucketlist</a> 
+  </div>
+  <div class="portfolio-item small four">
+    <a href="/london.html">London</a>
+  </div>
+  <div class="portfolio-item tall five"> 
+       <a href="/tokyo.html">Tokyo</a>
+  </div>
+  <div class="portfolio-item wide six">
+    <a href="/contact.html">Contact</a>
+  </div>
+  <div class="portfolio-item wide seven">
+    <a href="/index.html" active">Home</a>
+  </div>
+    <p> Isn't it time to traval?</p>
 </div>
-
-<div class="w3-row-padding">
-  <div class="w3-third">
-    <h2>London</h2>
-    <p>London is the capital city of England.</p>
-    <p>It is the most populous city in the United Kingdom,
-    with a metropolitan area of over 13 million inhabitants.</p>
-  </div>
-
-  <div class="w3-third">
-    <h2>Paris</h2>
-    <p>Paris is the capital of France.</p> 
-    <p>The Paris area is one of the largest population centers in Europe,
-    with more than 12 million inhabitants.</p>
-  </div>
-
-  <div class="w3-third">
-    <h2>Tokyo</h2>
-    <p>Tokyo is the capital of Japan.</p>
-    <p>It is the center of the Greater Tokyo Area,
-    and the most populous metropolitan area in the world.</p>
-  </div>
 </div>
-
+<div class="w3-container w3-gray scrollablevertical" id="policy">
+  <p>Den här webbplatsen använder cookies
+    Den här webbplatsen använder grundläggande cookies för att säkerställa att webbplatsen fungerar på rätt sätt samt spårnings-cookies för att förstå hur du använder webbplatsen. Spårnings-cookies sätts endast efter medgivande. </p>
+    <div class="w3-container">
+      <button class="w3-button w3-black" onclick="redpolicy()">Ok, thanks</button>
+    </div><br>
+  </div>
 <div class="footer w3-pale-yellow">
     <a href="contact.html"><p>Contact</p></a>
 </div>
