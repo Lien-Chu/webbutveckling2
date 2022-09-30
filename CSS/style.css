@@ -1,7 +1,7 @@
 #policy {
   position: fixed;
   bottom: 5%;
-  height: 20vh;
+  height: 30vh;
   width: 100%;
   color: white;
   background-color: rgb(78, 75, 75);
@@ -9,33 +9,22 @@
 }
 
 .main-content {
-  background-color: rgb(35, 31, 31);
-  padding-top: 22%;
   width: 100%;
-  height: 90vh;
-  z-index: 1;
-
+  height: 100vh;
 }
 
 .portfolio {
-  display: grid;
+  display: block;
   margin: 0 auto;
-  width: 90%;
-  height: 60%;
-  grid-template-rows: repeat(6, 1fr);
-  grid-template-columns: repeat(5, 1fr);
-
-  z-index: 2;
   font-size: 10px;
 }
 
 .portfolio-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-position: top left;
-  -webkit-filter: opacity(20%);
-  filter: opacity(50%);
+  margin: 5% auto;
+  filter: opacity(80%);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -48,86 +37,100 @@
 .portfolio-item:hover {
   transition: 0.3s;
   filter: opacity(100%);
-  color: rgb(255, 255, 255);
-}
-
-.small {
-  grid-row: span 1;
-  grid-column: span 1;
-}
-
-.medium {
-  grid-row: span 2;
-  grid-column: span 2;
-}
-
-.large {
-  grid-row: span 3;
-  grid-column: span 3;
-}
-
-.tall {
-  grid-row: span 3;
-  grid-column: span 2;
-}
-
-.wide {
-  grid-row: span 2;
-  grid-column: span 3;
-}
-
-.one {
-  background-image: url(/image/1.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin-left: 15%;
-}
-
-.tow {
-  background-image: url(/image/2.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin: 2%;
-}
-
-.three {
-  background-image: url(/image/3.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin: 5%;
-}
-
-.four {
-  background-image: url(/image/4.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin-right: 5%;
-  margin-bottom: 10%;
-}
-
-.five {
-  background-image: url(/image/8.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin: 6%;
-}
-
-.six {
-  background-image: url(/image/9.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin-left: 15%;
-}
-
-.seven {
-  background-color: darkcyan ;
-  margin: 5%;
-}
-.portfolio p {
-  color: rgb(195, 182, 182);
-  width: 30%;
-  font-size: 1.5em;
 
 }
 
-@media only screen and (min-width: 600px) {}
+@media only screen and (min-width: 769px) {
+  .portfolio {
+    display: grid;
+    margin: 0 auto;
+    width: 70%;
+    height: 80%;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    z-index: 2;
+    font-size: 15px;
+    margin-top: 5%;
+  }
+
+  .portfolio-item {
+    display: grid;
+    height: auto;
+  }
+
+
+  .small {
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+  
+  .medium {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+  
+  .large {
+    grid-row: span 3;
+    grid-column: span 3;
+  }
+  
+  .tall {
+    grid-row: span 3;
+    grid-column: span 2;
+  }
+  
+  .wide {
+    grid-row: span 2;
+    grid-column: span 3;
+  }
+
+}
+
+ @media only screen and (min-width: 1000px) {
+  .portfolio {
+    width: 70%;
+    height:90%;
+    font-size: 12px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .portfolio {
+    width: 60%;
+    height:90%;
+    font-size: 14px;
+  }
+
+  .one {
+    margin-left: 2%;
+    margin-right: 5%;
+  }
+
+  .tow {
+    margin: 1%;
+  }
+
+  .three {
+    margin: 5%;
+  }
+
+  .four {
+    margin-right: 4%;
+    margin-bottom: 7%;
+  }
+
+  .five {
+    margin-top: 2%;
+  }
+
+  .six {
+    margin-left: 2%;
+    margin-top: 5%;
+  }
+
+  .seven {
+    margin: 3%;
+  }
+}
+
